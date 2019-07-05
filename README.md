@@ -35,12 +35,19 @@ Layout:
                |                                                           |
                |                                                           |
                |                                                           |
-               |
+               -------------------------------------------------------------
 
-
-                      
-
-
+Components Tree: 
+                                App
+                        Header         MainPage
+                       /      \          |
+                   TapNewKeg  EditKeg    |
+                                        / \
+                                 Filters   KegList
+                                  /  \          \
+                            byABV  byPrice      Keg(props)
+                                                   /    \
+                                            SellBtn      ChangeKegBtn
 
 
 
