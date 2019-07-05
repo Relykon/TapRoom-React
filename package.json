@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^4.0.0",
@@ -31,5 +32,9 @@
   },
   "devDependencies": {
     "react-hot-loader": "^4.12.3"
-  }
+  },
+  "description": "Development Plan:",
+  "main": "index.jsx",
+  "author": "Kyle Harrington",
+  "license": "ISC"
 }
