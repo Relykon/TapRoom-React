@@ -1,13 +1,17 @@
 import React from 'react';
-import Header from './components/Header';
-import './App.css';
+import Header from './Header';
 
 function App() {
-  return (
-    <div className="App">
-      <Header/>
-    </div>
-  );
+    return (
+        <div>
+            <Header/>
+            <h1>Help Queue</h1>
+            <h3>3a</h3>
+            <h3>Thato and Haley</h3>
+            <p><em>Firebase entries not saving!</em></p>
+            <hr />
+        </div> 
+    );
 }
 
 export default App;
