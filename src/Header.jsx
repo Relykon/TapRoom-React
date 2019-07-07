@@ -5,7 +5,7 @@ function Header() {
     return (
         <div>
             <h1>BrewHaven</h1>
-            <Link to='/'>Home</Link> | <Link to='/addkeg'>Add New Keg</Link> | <Link to='/editkeg'>Edit Keg(s)</Link>
+            <Link to='/'>Home</Link> | <Link to='/newkeg'>Add New Keg</Link> | <Link to='/editkeg'>Edit Keg(s)</Link>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import kegs from '../src/assets/images/kegs.jpg';
+import kegs from './assets/images/kegs.jpg';
 
 function NewKegForm() {
     return (
@@ -25,6 +25,7 @@ function NewKegForm() {
             </form>
             <img src={kegs} />
         </div>
-    )
-    
+    );    
 }
+
+export default NewKegForm;
