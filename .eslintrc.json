@@ -1,4 +1,4 @@
-module.exports = {
+{
     "env": {
         "browser": true,
         "es6": true
@@ -23,7 +23,7 @@ module.exports = {
         "react/no-multi-comp": 2,
         "react/jsx-indent-props": [
             "error",
-            2
+            4
         ],
         "react/jsx-pascal-case": 2,
         "react/prop-types": 2,
@@ -33,7 +33,7 @@ module.exports = {
         ],
         "indent": [
             "error",
-            2
+            4
         ],
         "linebreak-style": [
             "error",
@@ -48,4 +48,4 @@ module.exports = {
             "always"
         ]
     }
-};
+}

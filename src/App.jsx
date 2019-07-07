@@ -1,15 +1,20 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
+import Keg from './Keg';
+import AddNewKeg from './AddNewKeg';
+import EditKeg from './EditKeg';
+import TapList from './TapList';
+import Error404 from './Error404';
 
 function App() {
     return (
         <div>
             <Header/>
-            <h1>Help Queue</h1>
-            <h3>3a</h3>
-            <h3>Thato and Haley</h3>
-            <p><em>Firebase entries not saving!</em></p>
-            <hr />
+            <Switch>
+                <Route exact path='/' component={TapList} />
+                <Route component={Error404} />
+            </Switch>
         </div> 
     );
 }
