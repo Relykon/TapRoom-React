@@ -24,15 +24,15 @@ var masterKegList = [
 
 function TapList() {
     return (
-        <div>
-            {masterKegList.map((keg, index) =>
-                <Keg beerName={keg.beerName}
+            <div>
+                {masterKegList.map((keg, index) =>
+                    <Keg beerName={keg.beerName}
                     breweryName={keg.breweryName}
                     price={keg.price}
                     abv={keg.abv}
                     key={index} />
-            )}
-        </div>
+                    )}
+            </div>
     );
 }
 
