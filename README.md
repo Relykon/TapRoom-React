@@ -49,3 +49,6 @@ Components Tree:
                             byABV  byPrice      Keg(props)
                                                    /    \
                                             SellBtn      ChangeKegBtn
+
+
+New Component Tree:
