@@ -2,21 +2,39 @@ Development Plan:
 
 Components:
 *Header
-    - menu (buttons:)
-        -Tap New Keg
-        -Edit 
-*Keg
-    -Amount left
-        - dynamic filtering ?
-*Sell Pint
-*Keg List (Menu)
-    - arrange by cost
-    - arrange by ABV
-*New Keg Form(TapKeg)
-*Edit Keg Form
+    - menu/nav buttons
+        1) Tap New Keg = '/addkeg' path
+            *AdminQuestion (component)
+                *NewKegForm (component)
+        2) Edit Kegs = '/editkeg' path
+            *AdminQuestion (component)
+                *TapList (component) -> on click takes you to:
+                    *EditKegForm (component)
+
+*KegList(component)
+    - dynamic filtering +(bonus)+
+        - filter by cost
+        - filter by ABV
+    *Keg(component)    
+        -name
+        -brewery
+        -cost
+        -abv
+        -sell pint (button) [stateChange]
+        -amount left [stateChange]
+            -dynamic rendering +(SuperBonus)+
+        -refill/change keg(button) +(bonus)+ [stateChange]
+        
+        
+*NewKegControl (component)
+    *AdminQuestion (component)
+    *NewKegForm (component)
+EditKegControl (component)
+    *AdminQuestion( component)
+    *EditKegForm (component)
 
 
-Layout:
+TapList component layout:
 
                                 Tap-Room-Header
                      Header Menu Options (TapNewKeg, EditKegInfo)
@@ -38,17 +56,18 @@ Layout:
                |                                                           |
                -------------------------------------------------------------
 
-Components Tree: 
-                                App
-                        Header         MainPage
-                       /      \          |
-                   TapNewKeg  EditKeg    |
-                                        / \
-                                 Filters   KegList
-                                  /  \          \
-                            byABV  byPrice      Keg(props)
-                                                   /    \
-                                            SellBtn      ChangeKegBtn
+(original) Components Tree mockup:
+
+                                   (App)
+                        (Header)         MainPage
+                       /      \           |
+                   TapNewKeg  EditKeg     |
+                                         / \
+                                  Filters   (KegList)
+                                   /  \          \
+                             byABV  byPrice      (Keg)
+                                                /    \
+                                         SellBtn      ChangeKegBtn
 
 
 New/ restructured Component Tree:
