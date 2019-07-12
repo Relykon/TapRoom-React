@@ -1,5 +1,8 @@
 Development Plan:
 
+Component Tree found in 'src\assets\planning\TapRoom-ComponentTree.jpg'
+
+
 Components:
 *Header
     - menu/nav buttons
@@ -24,7 +27,6 @@ Components:
         -amount left [stateChange]
             -dynamic rendering +(SuperBonus)+
         -refill/change keg(button) +(bonus)+ [stateChange]
-        
         
 *NewKegControl (component)
     *AdminQuestion (component)
@@ -56,19 +58,4 @@ TapList component layout:
                |                                                           |
                -------------------------------------------------------------
 
-(original) Components Tree mockup:
 
-                                   (App)
-                        (Header)         MainPage
-                       /      \           |
-                   TapNewKeg  EditKeg     |
-                                         / \
-                                  Filters   (KegList)
-                                   /  \          \
-                             byABV  byPrice      (Keg)
-                                                /    \
-                                         SellBtn      ChangeKegBtn
-
-
-New/ restructured Component Tree:
-continue crafting component tree on draw.io
