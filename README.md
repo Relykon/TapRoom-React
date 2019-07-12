@@ -51,4 +51,5 @@ Components Tree:
                                             SellBtn      ChangeKegBtn
 
 
-New Component Tree:
+New/ restructured Component Tree:
+continue crafting component tree on draw.io
