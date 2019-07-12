@@ -4,19 +4,19 @@ import Keg from './Keg';
 var masterKegList = [
     {
         beerName: 'Duff',
-        breweryName: 'Duff Brewing',
+        brewery: 'Duff Brewing',
         price: '$5',
         abv: '6%'
     },
     {
         beerName: 'Dufff',
-        breweryName: 'Duff Brewing',
+        brewery: 'Duff Brewing',
         price: '$5',
         abv: '6.5%'
     },
     {
         beerName: 'Duffff',
-        breweryName: 'Duff Brewing',
+        brewery: 'Duff Brewing',
         price: '$5',
         abv: '6.9%'
     }
@@ -27,7 +27,7 @@ function TapList() {
             <div>
                 {masterKegList.map((keg, index) =>
                     <Keg beerName={keg.beerName}
-                    breweryName={keg.breweryName}
+                    brewery={keg.brewery}
                     price={keg.price}
                     abv={keg.abv}
                     key={index} />

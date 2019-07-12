@@ -17,7 +17,7 @@ function Keg(props) {
             `}</style>
             <div className='the-keg'>
                 <h3>{props.beerName}</h3>
-                <h4>{props.breweryName}</h4>
+                <h4>{props.brewery}</h4>
                 <h5>{props.cost}</h5>
                 <h5>{props.abv} ABV</h5>
                 <button>Sell Pint</button>
@@ -28,7 +28,7 @@ function Keg(props) {
 
 Keg.propTypes = {
     beerName: PropTypes.string,
-    breweryName: PropTypes.string,
+    brewery: PropTypes.string,
     cost: PropTypes.string,
     abv: PropTypes.string
 };
