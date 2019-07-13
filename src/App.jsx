@@ -2,10 +2,10 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Moment from 'moment';
 import Header from './Header';
-import NewKegForm from './NewKegForm';
 import EditKegForm from './EditKegForm';
 import TapList from './TapList';
 import Error404 from './Error404';
+import NewKegControl from './NewKegControl';
 
 class App extends React.Component {
 
@@ -30,7 +30,7 @@ class App extends React.Component {
                 <Header/>
                 <Switch>
                     <Route exact path='/' render={() => <TapList tapList={this.state.masterTapList}/>} />
-                    <Route path='/newkeg' component={NewKegForm} />
+                    <Route path='/newkeg' render={() => <NewKegControl onNewKegCreation={this.handleAddingNewKegToTapList} />} />
                     <Route path='/editkeg' component={EditKegForm} />                
                     <Route component={Error404} />
                 </Switch>

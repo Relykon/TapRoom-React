@@ -1,7 +1,8 @@
 import React from 'react';
 import Keg from './Keg';
+// import PropTypes from 'prop-types';
 
-var masterKegList = [
+var masterTapList = [
     {
         beerName: 'Duff',
         brewery: 'Duff Brewing',
@@ -24,16 +25,20 @@ var masterKegList = [
 
 function TapList() {
     return (
-            <div>
-                {masterKegList.map((keg, index) =>
-                    <Keg beerName={keg.beerName}
+        <div>
+            {masterTapList.map((keg, index) =>
+                <Keg beerName={keg.beerName}
                     brewery={keg.brewery}
                     price={keg.price}
                     abv={keg.abv}
-                    key={index} />
-                    )}
-            </div>
+                    key={keg.id} />
+            )}
+        </div>
     );
 }
+
+// TapList.propTypes = {
+//     tapList: PropTypes.array
+// };
 
 export default TapList;

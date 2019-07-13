@@ -27,10 +27,10 @@ function Keg(props) {
 }
 
 Keg.propTypes = {
-    beerName: PropTypes.string,
-    brewery: PropTypes.string,
-    cost: PropTypes.string,
-    abv: PropTypes.string
+    beerName: PropTypes.string.isRequired,
+    brewery: PropTypes.string.isRequired,
+    cost: PropTypes.string.isRequired,
+    abv: PropTypes.string.isRequired
 };
 
 export default Keg;
