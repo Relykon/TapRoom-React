@@ -1,35 +1,35 @@
 import React from 'react';
 import Keg from './Keg';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-var masterTapList = [
-    {
-        beerName: 'Duff',
-        brewery: 'Duff Brewing',
-        price: '$5',
-        abv: '6%'
-    },
-    {
-        beerName: 'Dufff',
-        brewery: 'Duff Brewing',
-        price: '$5',
-        abv: '6.5%'
-    },
-    {
-        beerName: 'Duffff',
-        brewery: 'Duff Brewing',
-        price: '$5',
-        abv: '6.9%'
-    }
-];
+// var masterTapList = [
+//     {
+//         beerName: 'Duff',
+//         brewery: 'Duff Brewing',
+//         cost: '$5',
+//         abv: '6%'
+//     },
+//     {
+//         beerName: 'Dufff',
+//         brewery: 'Duff Brewing',
+//         cost: '$5',
+//         abv: '6.5%'
+//     },
+//     {
+//         beerName: 'Duffff',
+//         brewery: 'Duff Brewing',
+//         cost: '$5',
+//         abv: '6.9%'
+//     }
+// ];
 
-function TapList() {
+function TapList(props) {
     return (
         <div>
-            {masterTapList.map((keg, index) =>
+            {props.tapList.map((keg) =>
                 <Keg beerName={keg.beerName}
                     brewery={keg.brewery}
-                    price={keg.price}
+                    cost={keg.cost}
                     abv={keg.abv}
                     key={keg.id} />
             )}
@@ -37,8 +37,8 @@ function TapList() {
     );
 }
 
-// TapList.propTypes = {
-//     tapList: PropTypes.array
-// };
+TapList.propTypes = {
+    tapList: PropTypes.array
+};
 
 export default TapList;
