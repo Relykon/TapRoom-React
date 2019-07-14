@@ -33,7 +33,7 @@ class NewKegControl extends React.Component {
 }
 
 EditKegControl.propTypes = {
-    onKegEdit
+    onFinishedEditingKeg: PropTypes.func
 };
 
 export default EditKegControl;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import barrel from './assets/images/barrel.jpg';
 
 function Keg(props) {
-    return (
+    const kegInformation =
         <div style={{ display: 'inline-block', backgroundImage: 'url(' + barrel + ')', backgroundSize: 'contain', backgroundRepeat: 'no-repeat'}}>
             <style global jsx>{`
                 .the-keg{
@@ -23,14 +23,28 @@ function Keg(props) {
                 <button>Sell Pint</button>
             </div>
         </div>
-    );
+        if (props.currentRouterPath === '/editkeg') {
+            return (
+                <div onClick={() => { props.onKegSelection({ beerName: props.beerName, brewery: props.brewery, cost: props.cost, abv: props.abv }); }}>
+                    {kegInformation}
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    {kegInformation}
+                </div>
+            );
+        }
 }
 
 Keg.propTypes = {
     beerName: PropTypes.string.isRequired,
     brewery: PropTypes.string.isRequired,
     cost: PropTypes.string.isRequired,
-    abv: PropTypes.string.isRequired
+    abv: PropTypes.string.isRequired,
+    currentRouterPath: PropTypes.string,
+    onKegSelection: PropTypes.func
 };
 
 export default Keg;

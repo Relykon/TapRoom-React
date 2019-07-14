@@ -48,4 +48,8 @@ function EditKegForm(props) {
     );
 }
 
+EditKegForm.propTypes = {
+    onFinishedEditingKeg: PropTypes.func
+};
+
 export default EditKegForm;
