@@ -1,26 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AdminAuthorization from './AdminAuthorization';
-import NewKegForm from './NewKegForm';
+import EditKegForm from './EditKegForm';
 
 class NewKegControl extends React.Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
-            formVisibleOnPage: false
+            tapListVisibleOnPage: false
         };
         this.handleAdminConfirmation = this.handleAdminConfirmation.bind(this);
     }
 
     handleAdminConfirmation() {
-        this.setState({formVisibleOnPage: true});
+        this.setState({tapListVisibleOnPage: true});
     }
 
     render() {
         let currentlyVisibleContent = null;
-        if (this.state.formVisibleOnPage) {
-            currentlyVisibleContent = <NewKegForm onNewKegCreation={this.props.onNewKegCreation} />;
+        if (this.state.tapListVisibleOnPage) {
+            currentlyVisibleContent = <EditKegForm />;
         } else {
             currentlyVisibleContent = <AdminAuthorization onAdminConfirmation={this.handleAdminConfirmation}/>;
         }
@@ -32,8 +32,8 @@ class NewKegControl extends React.Component {
     }
 }
 
-NewKegControl.propTypes = {
-    onNewKegCreation: PropTypes.func
+EditKegControl.propTypes = {
+    onKegEdit
 };
 
-export default NewKegControl;
+export default EditKegControl;
