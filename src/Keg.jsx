@@ -22,7 +22,7 @@ function Keg(props) {
                 <h5>{props.abv} ABV</h5>
                 <button>Sell Pint</button>
             </div>
-        </div>
+        </div>;
         if (props.currentRouterPath === '/editkeg') {
             return (
                 <div onClick={() => { props.onKegSelection({ beerName: props.beerName, brewery: props.brewery, cost: props.cost, abv: props.abv }); }}>

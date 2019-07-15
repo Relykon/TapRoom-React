@@ -5,7 +5,7 @@ import Header from './Header';
 import TapList from './TapList';
 import Error404 from './Error404';
 import NewKegControl from './NewKegControl';
-import EditKegControl from './EditKegControl';
+// import EditKegControl from './EditKegControl';
 
 class App extends React.Component {
 
@@ -43,7 +43,7 @@ class App extends React.Component {
                 <Switch>
                     <Route exact path='/' render={() => <TapList tapList={this.state.masterTapList}/>} />
                     <Route path='/newkeg' render={() => <NewKegControl onNewKegCreation={this.handleAddingNewKegToTapList} />} />
-                    <Route path='/editkeg' render={() => <EditKegControl tapList={this.state.masterTapList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg} selectedKeg={this.state.selectedKeg} onFinishedEditingKeg={this.handleUpdatingEditedKegInTapList} />} />                
+                    {/* <Route path='/editkeg' render={() => <EditKegControl tapList={this.state.masterTapList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg} selectedKeg={this.state.selectedKeg} />} />                 */}
                     <Route component={Error404} />
                 </Switch>
             </div> 
@@ -52,3 +52,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+// onFinishedEditingKeg = { this.handleUpdatingEditedKegInTapList }
