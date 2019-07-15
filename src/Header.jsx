@@ -11,10 +11,12 @@ function Header() {
                 }
             `}</style>
             <h1>BrewHaven</h1>
-            <Link to='/'>Home</Link> | <Link to='/newkeg'>Add New Keg</Link> | <Link to='/editkeg'>Edit Keg(s)</Link>
+            <Link to='/'>Home</Link> | <Link to='/newkeg'>Add New Keg</Link>
             <hr/>
         </div>
     );
 }
 
 export default Header;
+
+//  | <Link to='/editkeg'>Edit Keg(s)

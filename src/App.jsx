@@ -12,8 +12,27 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            masterTapList: [],
-            selectedKeg: null
+            masterTapList: [
+                {
+                    beerName: 'Duff',
+                    brewery: 'Duff Brewing',
+                    cost: '$5',
+                    abv: '6%'
+                },
+                {
+                    beerName: 'Super Duff',
+                    brewery: 'Duff Brewing',
+                    cost: '$5',
+                    abv: '6.5%'
+                },
+                {
+                    beerName: 'The Right Duff Baby',
+                    brewery: 'Duff Brewing',
+                    cost: '$5',
+                    abv: '6.9%'
+                }
+            ]
+            // selectedKeg: null
         };
         this.handleAddingNewKegToTapList = this.handleAddingNewKegToTapList.bind(this);
         this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
